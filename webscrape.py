@@ -27,7 +27,8 @@ try:
 except:
     driver.quit()
 
-print(waveheight.text)
+height_list = [waveheight.text[0], waveheight.text[2]]
+print(height_list)
 
 
 driver.close()
