@@ -18,10 +18,16 @@ driver = webdriver.Chrome(service = Service(ChromeDriverManager().install()),
                           options = chrome_options)
 driver.get("https://deepswell.com/surf-report/US/Santa-Barbara/Sands-Beach/1547")
 
-print(webscrape_def.get_Wave_Height(driver))
-print(webscrape_def.get_Tide_Height(driver))
-print(webscrape_def.get_Tide_Direction(driver))
-print(webscrape_def.get_Wind_Speed(driver))
+wave_height = webscrape_def.get_Wave_Height(driver)
+tide_height = webscrape_def.get_Tide_Height(driver)
+tide_direction = webscrape_def.get_Tide_Direction(driver)
+wind_speed = webscrape_def.get_Wind_Speed(driver)
+
+
+# print(wave_height)
+# print(tide_height)
+# print(type(tide_direction))
+# print(wind_speed)
 
 
 driver.quit()

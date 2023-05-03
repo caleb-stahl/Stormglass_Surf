@@ -39,7 +39,7 @@ def get_Tide_Direction(driver):
 def get_Wind_Speed(driver):
     try:
         wind_speed = WebDriverWait(driver, 10).until(
-            EC.presence_of_element_located((By.XPATH, '//*[@id="swellTableID"]/table/tbody/tr[6]/td[2]'))
+            EC.presence_of_element_located((By.XPATH, '//*[@id="swellTableID"]/table/tbody/tr[5]/td[2]'))
         )
     except:
         print("Couldn't get wind speed successfully.")
