@@ -1,0 +1,56 @@
+body{
+    background-color: #072a4e;
+    background-image: url("ocean.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.main{
+    /* Dim */
+    width: 1200px;
+    height: 600px;
+    background-color: #0f67c0;
+
+    /* Div Position */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+}
+
+.main_title{
+    /* Text Position */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    color: aquamarine;
+}
+
+.water{
+    /* Image Alignment */
+    float: left;
+    margin-right: 10px;
+    margin-left: 100px;
+
+    /* Image Size */
+    height: 200px; 
+    width: 200px; 
+    object-fit: cover;
+
+}
+
+.weather{
+    /* Image Alignment */
+    float: right;
+    margin-right: 200px;
+    margin-left: 10px;
+    margin-top: -25px;
+
+    /* Image Size */
+    height: 200px; 
+    width: 200px; 
+    object-fit: cover;
+
+}
