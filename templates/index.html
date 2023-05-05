@@ -13,10 +13,8 @@
     </head>
     <body>
         <h1>Hello</h1>
-        <h1>Hi</h1>
-        <h1>Run</h1>
+        <img src="{{ url_for('static', filename='sea.png') }}" alt="Logo">
         {{tide_dir|safe}}
-        <span class = "glyphicon glyphicon-arrow-down"></span>
         {{wave_height}}
         {{tide_height}}
         {{wind_speed}}
