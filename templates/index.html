@@ -13,17 +13,28 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   </head>
   <body>
-    <h1>Hello</h1>
+    <div class="Out_body">
+      <h1>Sands Beach</h1>
+    </div>
     <div class="main">
-        <div class="main_title">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 text-center">
+            <h1>Waves</h1>
+          </div>
+          <div class="col-md-6 text-center">
             <h1>Weather</h1>
+          </div>
         </div>
-        <div class="water">
-            <img src="{{ url_for('static', filename='sea.png') }}" alt="Logo" height="200px" width="200px">
+        <div class="row">
+          <div class="col-md-6 text-center">
+            <img src="{{ url_for('static', filename='water_icon.png') }}" alt="Logo" height="200px" width="300px">
+          </div>
+          <div class="col-md-6 text-center">
+            <img src="{{ url_for('static', filename='sun-cloud.png') }}" alt="Stormy" height="200px" width="300px">
+          </div>
         </div>
-        <div class="weather">
-            <img src="{{ url_for('static', filename='lightning.png') }}" alt="Stormy" height="300px" width="300px">
-        </div>
+      </div>
     </div>
     {{tide_dir|safe}}
     {{wave_height}}
