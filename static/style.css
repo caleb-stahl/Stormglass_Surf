@@ -30,3 +30,14 @@ body{
     color: aliceblue;
 }
 
+
+.wave_info{
+    text-align: center;
+    font-size: 50px;
+
+}
+
+.weather_info{
+    text-align: center;
+    font-size: 50px;
+}

@@ -1,5 +1,5 @@
 """
-Webscrape wave height off Surfline
+Webscrape
 """
 import webscrape_def
 from selenium import webdriver
@@ -22,6 +22,9 @@ wave_height = webscrape_def.get_Wave_Height(driver)
 tide_height = webscrape_def.get_Tide_Height(driver)
 tide_direction = webscrape_def.get_Tide_Direction(driver)
 wind_speed = webscrape_def.get_Wind_Speed(driver)
+weather = webscrape_def.getWeather(driver)
+water_temp = webscrape_def.getWaterTemp(driver)
+period = webscrape_def.getPeriod(driver)
 
 
 # print(wave_height)

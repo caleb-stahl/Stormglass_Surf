@@ -51,4 +51,46 @@ def get_Wind_Speed(driver):
         if i.isdigit() == True:
             wind_speed_val = i
     return wind_speed_val, wind_direction
+
+def getWeather(driver):
+    try:
+        temperature = WebDriverWait(driver, 10).until(
+            EC.presence_of_element_located((By.XPATH, '//*[@id="RenderBodyContainer"]/div/div/div[1]/div[3]/div/div/div[2]/table/tbody/tr[1]/td[2]'))
+        )
+    except:
+        print("Couldn't get temp successfully.")
+
+    try:
+        conditions = WebDriverWait(driver, 10).until(
+            EC.presence_of_element_located((By.XPATH, '//*[@id="RenderBodyContainer"]/div/div/div[1]/div[3]/div/div/div[1]'))
+        )
+    except:
+        print("Couldn't get condition successfully.")
+
+    weather = [temperature.text[:2], conditions.text]
+
+    return weather
     
+def getWaterTemp(driver):
+    try:
+        water_temp = WebDriverWait(driver, 10).until(
+            EC.presence_of_element_located((By.XPATH, '//*[@id="RenderBodyContainer"]/div/div/div[1]/div[3]/div/div/div[2]/table/tbody/tr[2]/td[2]'))
+        )
+    except:
+        print("Couldn't get Water temp successfully.")
+
+    return water_temp.text
+
+def getPeriod(driver):
+    try:
+        period = WebDriverWait(driver, 10).until(
+            EC.presence_of_element_located((By.XPATH, '//*[@id="swellTableID"]/table/tbody/tr[2]'))
+        )
+    except:
+        print("Couldn't get Water period successfully.")
+
+    wperiod = [period.text[7:10], period.text[22:24]]
+    
+    print(wperiod)
+    return wperiod
+
